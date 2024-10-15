@@ -8,6 +8,7 @@ archive_path = base_dir / Path('files.zip')
 with zipfile.ZipFile(archive_path, 'w') as Zfile:
     for path in base_dir.rglob("*.txt"):
         Zfile.write(path)
+        path.unlink # deletes  the main file after zipping
         
 #     # unzip files
 # with zipfile.ZipFile(archive_path, 'r') as Zfile:
