@@ -31,14 +31,8 @@ Community and Mentorship: ALX fosters a strong learning community, with peer sup
 #100DaysOfCode Challenge: Many ALX students participate in coding challenges like the #100DaysOfCode initiative, where they commit to learning and coding every day for 100 days. This helps learners stay consistent, document their progress, and build an online presence.
 
 ALX aims to create a sustainable talent pipeline by training individuals to meet the growing demand for tech professionals across Africa and beyond.
-
-
-
-
-
-
-
 """
+
 pdf.multi_cell(w=0, h=15, txt=txt0)
 
 pdf.set_font(family='Times', style='B', size=14)
