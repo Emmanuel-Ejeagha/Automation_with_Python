@@ -3,6 +3,7 @@ from fpdf import FPDF
 # install openpyxl
 
 file = pd.read_excel('generatnExtractnPdf/002 data.xlsx')
+
 # print(file)
 
 for index, row in file.iterrows():
