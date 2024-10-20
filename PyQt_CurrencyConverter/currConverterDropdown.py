@@ -55,7 +55,7 @@ layout2.addWidget(from_combo)
 
 to_combo = QComboBox()
 to_combo.addItems(currencies)
-layout.addWidget(to_combo)
+layout2.addWidget(to_combo)
 
 # Input field
 text = QLineEdit()
