@@ -7,10 +7,11 @@ from pathlib import Path
 def open_files():
     """Opens a diaglue box when it is clicked"""
     global filenames
-    filenames, _ = QFileDialog.getOpenFileName(window, 'Select files') # Opens computer file path
+    filenames, _ = QFileDialog.getOpenFileNames(window, 'Select files') # Opens computer file path, can select multiple files
     message.setText('\n'.join(filenames))
 
 def destroy_files():
+    """Destroys files when it is clicked"""
     for filename in filenames:
         path = Path(filename)
         with open(path, 'wb') as file:
@@ -36,7 +37,7 @@ open_btn.clicked.connect(open_files) # Connect btn to a function
 destroy_btn = QPushButton('Destroy Files')
 destroy_btn.setFixedWidth(120)
 layout.addWidget(destroy_btn, alignment=Qt.AlignmentFlag.AlignCenter) # Align Button to the centre
-open_btn.clicked.connect(destroy_files) # Connect btn to a function
+destroy_btn.clicked.connect(destroy_files) # Connect btn to a function
 
 message = QLabel('')
 layout.addWidget(message)
